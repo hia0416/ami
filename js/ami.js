@@ -1,31 +1,39 @@
-window.onload = function () {
+$(function () {
+
+  let wWidth = $("body").outerWidth();
 
   //main화면 mousemove 이벤트
-  const mainImg = document.querySelector(".mainImg");
+  const mainImg = $(".mainImg");
 
-  mainImg.addEventListener("mousemove", e => {
+  mainImg.on("mousemove", e => {
     let posX = e.pageX;
     let posY = e.pageY;
 
-    let bge1 = document.querySelector(".bge1");
-    let bge2 = document.querySelector(".bge2");
+    let bge1 = $(".bge1");
+    let bge2 = $(".bge2");
 
-    bge1.setAttribute('style', `right:${20 - (posX / 30)}px; bottom:${20 - (posY / 30)}px`);
-    bge2.setAttribute('style', `left:${50 - (posX / 30)}px; top:${60 - (posY / 20)}px`);
+    bge1.attr('style', `right:${20 - (posX / 30)}px; bottom:${20 - (posY / 30)}px`);
+    bge2.attr('style', `left:${50 - (posX / 30)}px; top:${60 - (posY / 20)}px`);
   })
 
   //.search
-  const searchEl = document.querySelector('.search');
-  const searchInput = searchEl.querySelector('input');
+  const searchEl = $('.search');
+  const searchInput = $('.searchInput')
 
-  searchEl.addEventListener('click',function(){
+  searchEl.on('click',function(){
     searchInput.focus();
   })
-  searchInput.addEventListener('focus',function(){
-    searchInput.setAttribute('placeholder', '검색');
+  searchInput.on('focus',function(){
+    searchInput.attr('placeholder', '검색');
+    if(wWidth >= 768){
+      $('.searchimg').css('opacity',0);
+    }
   })
-  searchInput.addEventListener('blur',function(){
-    searchInput.setAttribute('placeholder', '');
+  searchInput.on('blur',function(){
+    searchInput.attr('placeholder', '');
+    if(wWidth >= 768){
+      $('.searchimg').css('opacity',1);
+    }
   })
 
   //clock -> .timeInfo
@@ -59,7 +67,6 @@ window.onload = function () {
 
   //#exhibition 
 
-  let wWidth = $("body").outerWidth();
   let exhiList = $(".exhibitionList");
 
   //pc슬라이드
@@ -203,4 +210,4 @@ window.onload = function () {
     },700)
   })
 
-}
+})

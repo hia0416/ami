@@ -271,6 +271,7 @@ header .gnb {
 header .gnb li {
   width: 32px;
   padding-left: 30px;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   header .gnb li {
@@ -289,18 +290,15 @@ header .gnb .search {
     height: 25px;
   }
 }
-header .gnb .search a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-header .gnb .search a img {
+header .gnb .search img {
   display: inline-block;
   width: 100%;
   height: 100%;
   left: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
-header .gnb .search a input {
+header .gnb .search input {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -316,20 +314,24 @@ header .gnb .search a input {
           transform: translateY(-50%);
   -webkit-transition: 0.7s;
   transition: 0.7s;
-  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
-  header .gnb .search a input {
+  header .gnb .search input {
     top: 180%;
     right: 0;
     -webkit-transform: none;
             transform: none;
   }
 }
-header .gnb .search a input:focus {
+header .gnb .search input:focus {
   width: 180px;
   border: 2px solid #455955;
-  background: #d9c2a7;
+  background: rgba(255, 255, 255, 0.2);
+}
+header .gnb .search a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 header .hamBtn {
   position: absolute;
@@ -514,10 +516,10 @@ header .mbMenu .mPagemenu li:hover a {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-#container #pageMenu li.active {
+#container #pageMenu li.active, #container #pageMenu li:hover {
   letter-spacing: 5px;
 }
-#container #pageMenu li.active::after {
+#container #pageMenu li.active::after, #container #pageMenu li:hover::after {
   width: 100%;
   background: #f6a608;
 }
@@ -832,7 +834,7 @@ header .mbMenu .mPagemenu li:hover a {
 @media screen and (max-width: 767px) {
   #container #exhibition .exhibitionWrap .exhibitionList .textWrap {
     background: none;
-    width: 50%;
+    width: 100%;
   }
 }
 #container #exhibition .exhibitionWrap .exhibitionList .textWrap .listNo {
@@ -860,6 +862,7 @@ header .mbMenu .mPagemenu li:hover a {
 @media screen and (max-width: 767px) {
   #container #exhibition .exhibitionWrap .exhibitionList .textWrap.active .listNo {
     font-size: 3em;
+    right: 90%;
   }
 }
 #container #exhibition .exhibitionWrap .exhibitionList .textWrap.active .textBox {
@@ -1344,8 +1347,13 @@ header .mbMenu .mPagemenu li:hover a {
 #container #amistory .plusmore .foreground {
   stroke: #194E26;
 }
-#container #amistory .plusmore .line {
+#container #amistory .plusmore:hover .line {
   stroke: #194E26;
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .plusmore .line {
+    stroke: #194E26;
+  }
 }
 #container #amistory .storyWrap {
   max-width: 920px;
@@ -1419,7 +1427,7 @@ header .mbMenu .mPagemenu li:hover a {
 @media screen and (max-width: 640px) {
   #container #amistory .storyWrap .storybox {
     width: 200px;
-    height: 180px;
+    height: 190px;
   }
 }
 @media screen and (max-width: 480px) {

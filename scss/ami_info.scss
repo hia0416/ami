@@ -1,0 +1,169 @@
+// @import "reset.css";
+// @import "ami_style.css";
+
+$amigreen: #194E26;
+$amiyellow: #f6a608;
+$bgbeige: #d9c2a7;
+$bgblue: #455955;
+$bgyellow: #e3b657;
+$bgblack: #232426;
+
+
+@font-face {
+  font-family: "Noto sans KR";
+  src: url(../font/NotoSansKR-Regular.otf) format('otf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Noto sans KR";
+  src: url(../font/NotoSansKR-Thin.otf) format('otf');
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Century Gothic";
+  src: url(../font/GOTHIC.TTF);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Century Gothic";
+  src: url(../font/GOTHICB.TTF);
+  font-weight: 700;
+}
+
+$pcwidth:1780px;
+$tabwidth:1024px;
+$mobile870:870px;
+$mobile767: 767px;
+$mobile640: 640px;
+$mobile480: 480px;
+$mobile360: 360px;
+
+$hdHeight100:100px;
+$hdHeight65:65px;
+
+@mixin respond($mobile){
+  @media screen and (max-width:$mobile) {
+    @content;
+  }
+}
+
+
+
+#container{
+  background: $bgblack;
+
+  h1{
+    font-size: 2em;
+    text-align: center;
+    line-height: 100px;
+    color: $amiyellow;
+  }
+  .detailWrap {
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0 100px;
+    display: flex;
+    flex-direction: column;
+    .detailTitle{
+      padding: 10px;
+      color: $amiyellow;
+      flex-basis: 20%;
+      text-align: right;
+    }
+    .detailContent{
+      padding: 10px;
+      font-size: .9em;
+      color: white;
+      flex-shrink: 100;
+      flex-basis: 80%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // 관람안내 tourInfo
+  #tourinfoWrap{
+    padding-top: 100px;
+    max-width: 900px;
+    @include respond($mobile767){
+      padding-top: 65px;
+    }
+    .tourinfoDetail{
+      display: flex;
+      padding: 10px 10px 30px 10px;
+      border-bottom: 1px dashed $bgbeige;
+    }
+
+    .etiquetteWrap{
+      width: 80%;
+      margin: 0 auto;
+      max-width: 900px;
+      // background: $bgblue;
+      padding: 0 0 100px;
+      display: flex;
+      flex-direction: column;
+      .etiqbox{
+        border-radius: 5px;
+        background: rgba($color: white, $alpha: .9);
+        padding: 5px;
+        .etiqboxTitle{
+          line-height: 50px;
+          text-align: center;
+          color: white;
+          font-size: 1.2em;
+          padding-right: 10px;
+          background: $amigreen;
+          border-radius: 5px;
+        }
+        .etiqDetail{
+          display: flex;
+          padding: 2px 0 0;
+          .etiqTitle{
+            flex-basis: 20%;
+            background: rgba($color: $bgbeige, $alpha: .5);
+            padding: 5px 10px 20px;
+            text-align: right;
+            color: $amigreen;
+            font-weight: 500;
+            border-radius: 3px 0 0 3px;
+
+          }
+          .etiqContent{
+            flex-basis: 80%;
+            padding: 5px 5px 20px;
+            font-size: .9em;
+            background: rgba($color:$bgblack, $alpha: .05);
+            border-radius: 0 3px 3px 0;
+
+          }
+        }
+      }
+      
+    }
+  }
+  
+  
+  // 오시는 길 location
+  #locationWrap{
+    padding-top: 100px;
+    max-width: 900px;
+    @include respond($mobile767){
+      padding-top: 65px;
+    }
+    #map {
+      background-color: $amiyellow;
+      width: 90%;
+      max-width: 900px;
+      height: 500px;
+      margin: 0 auto;
+    }
+    .locationDetail{
+      padding-bottom: 30px;
+      display: flex;
+      border-bottom: 1px dashed $bgbeige;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+}
