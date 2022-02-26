@@ -49,6 +49,11 @@ window.onload = function () {
     $(".mbMenu").css("left", "-100%");
   })
 
+  //모바일메뉴창
+  $(".mPagemenu>li").on('click',function(){
+    $(".mbMenu").css("left", "-100%");
+  })
+
   
 
 
@@ -191,9 +196,11 @@ window.onload = function () {
 
 
   //toTop
-  $(".topBtn").on("click", function (e) {
+  $(".topBtn").on("click",function(e){
     e.preventDefault();
-    fullpage_api.moveTo('none', 1);
+    $('html, body').stop().animate({
+      scrollTop:0
+    },700)
   })
 
 }

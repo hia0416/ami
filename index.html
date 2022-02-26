@@ -56,10 +56,10 @@
     <div class="mbMenu">
       <div class="closeBtn"><a href="javascript:void(0)"><img src="./images/btn_close.png" alt="close"></a></div>
       <ul class="mPagemenu">
-        <li><a href="javascript:void(0)">Exhibition</a></li>
-        <li><a href="javascript:void(0)">Program</a></li>
-        <li><a href="javascript:void(0)">Ami Story</a></li>
-        <li><a href="javascript:void(0)">Museum Info</a></li>
+        <li><a href="#exhibition">Exhibition</a></li>
+        <li><a href="#program">Program</a></li>
+        <li><a href="#amistory">Ami Story</a></li>
+        <li><a href="#museuminfo">Museum Info</a></li>
       </ul>
     </div>
   </header>
@@ -67,14 +67,14 @@
   <!-- #container -->
   <div id="container">
     <ul id="pageMenu">
-      <li data-menuanchor="none"><a href="javascript:void(0)"></a></li>
+      <li data-menuanchor="main"><a href="javascript:void(0)"></a></li>
       <li data-menuanchor="firstPage"><a href="#firstPage">Exhibition</a></li>
       <li data-menuanchor="secondPage"><a href="#secondPage">Program</a></li>
       <li data-menuanchor="thirdPage"><a href="#thirdPage">Ami Story</a></li>
       <li data-menuanchor="fourthPage"><a href="#fourthPage">Museum Info</a></li>
     </ul>
     <div id="fullpage">
-      <div class="section contents" id="main" data-anchor="none">
+      <div class="section contents" id="main" data-anchor="main">
         <div class="mainImg">
           <img src="./images/bg_effect1.png" alt="bg_effect1" class="bge1">
           <img src="./images/bg_effect2.png" alt="bg_effect2" class="bge2">
@@ -375,9 +375,9 @@
             AMI
             MUSEUM OF ART ALL RIGHTS RESERVED</address>
           <ul class="sns">
-            <li><a href="javascript:void(0)"><img src="./images/icon_facebook.png" alt="Facebook"></a></li>
-            <li><a href="javascript:void(0)"><img src="./images/icon_twitter.png" alt="Twitter"></a></li>
-            <li><a href="javascript:void(0)"><img src="./images/icon_blog.png" alt="NaverBlog"></a></li>
+            <li><a href="https://www.facebook.com/EcoleDeAmi?ref=hl"><img src="./images/icon_facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://twitter.com/amiart1"><img src="./images/icon_twitter.png" alt="Twitter"></a></li>
+            <li><a href="https://blog.naver.com/amam158"><img src="./images/icon_blog.png" alt="NaverBlog"></a></li>
           </ul>
           <div class="topBtn"><a href="javascript:void(0)">TOP</a></div>
         </div>
@@ -390,7 +390,7 @@
   <script>
     var myFullpage = new fullpage('#fullpage', {
       menu: "#pageMenu",
-      anchors: ['none','firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+      anchors: ['main','firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
       responsiveWidth:767
     })
   </script>

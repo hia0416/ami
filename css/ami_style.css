@@ -438,6 +438,8 @@ header .mbMenu {
           align-items: center;
   text-align: center;
   left: -100%;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 header .mbMenu .closeBtn {
   position: absolute;
@@ -1338,6 +1340,12 @@ header .mbMenu .mPagemenu li:hover a {
     -webkit-transform: scale(0.6);
             transform: scale(0.6);
   }
+}
+#container #amistory .plusmore .foreground {
+  stroke: #194E26;
+}
+#container #amistory .plusmore .line {
+  stroke: #194E26;
 }
 #container #amistory .storyWrap {
   max-width: 920px;

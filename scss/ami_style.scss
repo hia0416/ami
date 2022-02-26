@@ -417,6 +417,7 @@ header{
     align-items: center;
     text-align: center;
     left: -100%;
+    transition: all .7s;
     
     .closeBtn{
       position: absolute;
@@ -742,7 +743,6 @@ header{
             top: 10%;
             left: 0;
           }
-         
         }
         &:nth-child(3){
           left: 20%;
@@ -752,7 +752,6 @@ header{
             top: 20%;
             left: 0;
           }
-          
         }
         img{
           width: 100%;
@@ -782,7 +781,6 @@ header{
           @include respond($mobile767){
             background: none;
             width: 50%;
-            
           }
           .listNo{
             position: absolute;
@@ -798,7 +796,6 @@ header{
               right: -100%;
               text-shadow: 1px 2px 2px rgba($color: #000, $alpha: 0.1);
             }
-
           }
           &.active{
             .listNo{
@@ -1215,6 +1212,12 @@ header{
       }
       @include respond($mobile360){
         transform: scale(.6);
+      }
+      .foreground{
+        stroke: $amigreen;
+      }
+      .line{
+        stroke: $amigreen;
       }
     }
     .storyWrap{
