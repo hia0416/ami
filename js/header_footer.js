@@ -24,12 +24,12 @@ $(function(){
     click: function () {
       $(".timeInfo").slideToggle();
     },
-    mouseenter: function () {
-      $(".timeInfo").slideDown();
-    },
-    mouseleave: function () {
-      $(".timeInfo").slideUp();
-    }
+    // mouseenter: function () {
+    //   $(".timeInfo").slideDown();
+    // },
+    // mouseleave: function () {
+    //   $(".timeInfo").slideUp();
+    // }
   })
 
   //hamBtn
