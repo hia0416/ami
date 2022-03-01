@@ -23,6 +23,12 @@
 
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/ami.js"></script>
+  <script>
+    $(function(){
+      $("#header").load('header.html');
+      $("#footer").load('footer.html');
+    })
+  </script>
 
 </head>
 
@@ -32,8 +38,8 @@
   </ul>
 
   <!-- header -->
-  <header>
-    <div class="innerBox">
+  <header id="header">
+    <!-- <div class="innerBox">
       <h1 class="logo"><a href="./index.html">logo</a></h1>
       <ul class="gnb">
         <li class="search">
@@ -59,7 +65,7 @@
         <li><a href="#amistory">Ami Story</a></li>
         <li><a href="#museuminfo">Museum Info</a></li>
       </ul>
-    </div>
+    </div> -->
   </header>
 
   <!-- #container -->
@@ -366,8 +372,8 @@
         </div>
       </div>
       <!-- footer -->
-      <footer class="section fp-auto-height">
-        <div class="innerBox">
+      <footer id="footer" class="section fp-auto-height">
+        <!-- <div class="innerBox">
           <h1 class="footLogo"><img src="./images/logo_w.png" alt="footlogo"></h1>
           <address>충남 당진시 순성면 남부로 753~4 <br> T.041-353-1555 F.041-353-1555 <br>E.AMAM158@NAVER.COM <br> COPYRIGHT 2014
             AMI
@@ -379,7 +385,7 @@
             <li><a href="https://blog.naver.com/amam158"><img src="./images/icon_blog.png" alt="NaverBlog"></a></li>
           </ul>
           <div class="topBtn"><a href="#main">TOP</a></div>
-        </div>
+        </div> -->
       </footer>
     </div>
   </div>

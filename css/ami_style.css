@@ -242,7 +242,9 @@ header .logo {
 header .logo a {
   display: block;
   line-height: 100px;
-  background: url(../images/logo_g.png) no-repeat center center;
+  background-image: url(../images/logo_g.png);
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: contain;
 }
 @media screen and (max-width: 767px) {
@@ -314,6 +316,7 @@ header .gnb .search input {
           transform: translateY(-50%);
   -webkit-transition: 0.7s;
   transition: 0.7s;
+  cursor: pointer;
 }
 @media screen and (max-width: 767px) {
   header .gnb .search input {
@@ -579,6 +582,11 @@ header .mbMenu .mPagemenu li:hover a {
   background-position: center bottom;
   background-repeat: no-repeat;
 }
+@media screen and (max-width: 1024px) {
+  #container #main .mainImg {
+    background-position: -300px bottom;
+  }
+}
 @media screen and (max-width: 767px) {
   #container #main .mainImg {
     height: calc(100% - 65px);
@@ -586,11 +594,6 @@ header .mbMenu .mPagemenu li:hover a {
   }
 }
 @media screen and (max-width: 640px) {
-  #container #main .mainImg {
-    background-position: -100px bottom;
-  }
-}
-@media screen and (max-width: 480px) {
   #container #main .mainImg {
     background-position: -150px bottom;
   }
@@ -618,12 +621,18 @@ header .mbMenu .mPagemenu li:hover a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+@media screen and (max-width: 1024px) {
+  #container #main .welcome {
+    left: 35%;
+    bottom: 25%;
+  }
+}
 @media screen and (max-width: 767px) {
   #container #main .welcome {
     width: 90px;
     height: 90px;
     left: 35%;
-    bottom: 10%;
+    bottom: 18%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -631,7 +640,6 @@ header .mbMenu .mPagemenu li:hover a {
     width: 60px;
     height: 60px;
     left: 20%;
-    bottom: 10%;
   }
 }
 #container #main .welcome p {

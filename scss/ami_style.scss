@@ -1,76 +1,77 @@
+@import "./common.scss";
 
-$amigreen: #194E26;
-$amiyellow: #f6a608;
-$bgbeige: #d9c2a7;
-$bgblue: #455955;
-$bgyellow: #e3b657;
-$bgblack: #232426;
+// $amigreen: #194E26;
+// $amiyellow: #f6a608;
+// $bgbeige: #d9c2a7;
+// $bgblue: #455955;
+// $bgyellow: #e3b657;
+// $bgblack: #232426;
 
 
-@font-face {
-  font-family: "Noto sans KR";
-  src: url(../font/NotoSansKR-Regular.otf) format('otf');
-  font-weight: 300;
-}
-@font-face {
-  font-family: "Noto sans KR";
-  src: url(../font/NotoSansKR-Thin.otf) format('otf');
-  font-weight: 100;
-}
-@font-face {
-  font-family: "Century Gothic";
-  src: url(../font/GOTHIC.TTF);
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Century Gothic";
-  src: url(../font/GOTHICB.TTF);
-  font-weight: 700;
-}
+// @font-face {
+//   font-family: "Noto sans KR";
+//   src: url(../font/NotoSansKR-Regular.otf) format('otf');
+//   font-weight: 300;
+// }
+// @font-face {
+//   font-family: "Noto sans KR";
+//   src: url(../font/NotoSansKR-Thin.otf) format('otf');
+//   font-weight: 100;
+// }
+// @font-face {
+//   font-family: "Century Gothic";
+//   src: url(../font/GOTHIC.TTF);
+//   font-weight: normal;
+// }
+// @font-face {
+//   font-family: "Century Gothic";
+//   src: url(../font/GOTHICB.TTF);
+//   font-weight: 700;
+// }
 
-$pcwidth:1780px;
-$tabwidth:1024px;
-$mobile870:870px;
-$mobile767: 767px;
-$mobile640: 640px;
-$mobile480: 480px;
-$mobile360: 360px;
+// $pcwidth:1780px;
+// $tabwidth:1024px;
+// $mobile870:870px;
+// $mobile767: 767px;
+// $mobile640: 640px;
+// $mobile480: 480px;
+// $mobile360: 360px;
 
-$hdHeight100:100px;
-$hdHeight65:65px;
+// $hdHeight100:100px;
+// $hdHeight65:65px;
 
-@mixin respond($mobile){
-  @media screen and (max-width:$mobile) {
-    @content;
-  }
-}
+// @mixin respond($mobile){
+//   @media screen and (max-width:$mobile) {
+//     @content;
+//   }
+// }
 
-@mixin rectborder($width, $color, $duration,$direction){
-  position: relative;
-  &:before{
-    content: "";
-    position: absolute;
-    width: calc(100% + #{$width * 2});
-    height: calc(100% + #{$width * 2});
-    top: calc(#{$width}/-1);
-    left: calc(#{$width}/-1);
-    background: linear-gradient(to right, $color 0%, $color 100%), linear-gradient(to top, $color 50%, transparent 50%), linear-gradient(to top, $color 50%, transparent 50%), linear-gradient(to right, $color 0%, $color 100%), linear-gradient(to left, $color 0%, $color 100%);
-    background-size: 100% $width, $width 200%, $width 200%, 0% $width, 0% $width;
-    background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
-    background-repeat: no-repeat, no-repeat;
-    transition: transform $duration ease-in-out, background-position $duration ease-in-out, background-size $duration ease-in-out;
-    transform: scaleX(0) rotate(180deg * $direction);
-    transition-delay: $duration*2, $duration, 0s;
-  }
-  &:hover{
-    &:before{
-      background-size: 200% $width, $width 400%, $width 400%, 55% $width, 55% $width;
-      background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
-      transform: scaleX(1) rotate(180deg * $direction);
-      transition-delay: 0s, $duration, $duration * 2;
-    }
-  }
-}
+// @mixin rectborder($width, $color, $duration,$direction){
+//   position: relative;
+//   &:before{
+//     content: "";
+//     position: absolute;
+//     width: calc(100% + #{$width * 2});
+//     height: calc(100% + #{$width * 2});
+//     top: calc(#{$width}/-1);
+//     left: calc(#{$width}/-1);
+//     background: linear-gradient(to right, $color 0%, $color 100%), linear-gradient(to top, $color 50%, transparent 50%), linear-gradient(to top, $color 50%, transparent 50%), linear-gradient(to right, $color 0%, $color 100%), linear-gradient(to left, $color 0%, $color 100%);
+//     background-size: 100% $width, $width 200%, $width 200%, 0% $width, 0% $width;
+//     background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+//     background-repeat: no-repeat, no-repeat;
+//     transition: transform $duration ease-in-out, background-position $duration ease-in-out, background-size $duration ease-in-out;
+//     transform: scaleX(0) rotate(180deg * $direction);
+//     transition-delay: $duration*2, $duration, 0s;
+//   }
+//   &:hover{
+//     &:before{
+//       background-size: 200% $width, $width 400%, $width 400%, 55% $width, 55% $width;
+//       background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+//       transform: scaleX(1) rotate(180deg * $direction);
+//       transition-delay: 0s, $duration, $duration * 2;
+//     }
+//   }
+// }
 
 @keyframes scrollAni {
   0% {
@@ -247,7 +248,9 @@ header{
     a{
       display: block;
       line-height: $hdHeight100;
-      background: url(../images/logo_g.png) no-repeat center center;
+      background-image: url(../images/logo_g.png);
+      background-repeat: no-repeat;
+      background-position: center center;
       background-size: contain;
       @include respond($mobile767){
         line-height: $hdHeight65;
@@ -304,7 +307,8 @@ header{
         top: 50%;
         transform: translateY(-50%);
         transition: .7s;
-        
+        cursor: pointer;
+
         @include respond($mobile767){
           top: 180%;
           right: 0;
@@ -555,14 +559,14 @@ header{
       background-size: cover;
       background-position: center bottom;
       background-repeat: no-repeat;
+      @include respond($tabwidth){
+        background-position: -300px bottom;
+      }
       @include respond($mobile767){
         height: calc(100% - #{$hdHeight65});
         background-position: -100px bottom;
       }
       @include respond($mobile640){
-        background-position: -100px bottom;
-      }
-      @include respond($mobile480){
         background-position: -150px bottom;
       }
 
@@ -590,17 +594,20 @@ header{
       bottom: 30%;
       left: 40%;
       box-sizing: border-box;
+      @include respond($tabwidth){
+        left: 35%;
+        bottom: 25%;
+      }
       @include respond($mobile767){
         width: 90px;
         height: 90px;
         left: 35%;
-        bottom: 10%;
+        bottom: 18%;
       }
       @include respond($mobile480){
         width: 60px;
         height: 60px;
         left: 20%;
-        bottom: 10%;
       }
       
       p{

@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Noto sans KR";
+  src: url(../font/NotoSansKR-Regular.otf) format("otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Noto sans KR";
+  src: url(../font/NotoSansKR-Thin.otf) format("otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Century Gothic";
+  src: url(../font/GOTHIC.TTF);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Century Gothic";
+  src: url(../font/GOTHICB.TTF);
+  font-weight: 700;
+}
