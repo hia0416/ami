@@ -20,17 +20,10 @@ $(function(){
   })
 
   //clock -> .timeInfo
-  $(".clock").on({
-    click: function () {
-      $(".timeInfo").slideToggle();
-    },
-    // mouseenter: function () {
-    //   $(".timeInfo").slideDown();
-    // },
-    // mouseleave: function () {
-    //   $(".timeInfo").slideUp();
-    // }
+  $(".clock").off('click').on('click',function(){
+    $('.timeInfo').slideToggle();
   })
+
 
   //hamBtn
   $(".hamBtn").on("click", function () {
