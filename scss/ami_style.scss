@@ -1627,6 +1627,8 @@ header{
         width: 50%;
         height: 100%;
         margin: 0 auto;
+        border: 1px solid $bgblack;
+        box-sizing: border-box;
         background: url(../images/bg_museuminfo.jpg) no-repeat center center;
         background-size: cover;
         @include respond($tabwidth){

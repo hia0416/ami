@@ -1928,6 +1928,9 @@ header .mbMenu .mPagemenu li:hover a {
   width: 50%;
   height: 100%;
   margin: 0 auto;
+  border: 1px solid #232426;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: url(../images/bg_museuminfo.jpg) no-repeat center center;
   background-size: cover;
 }
