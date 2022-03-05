@@ -64,7 +64,7 @@ body {
   padding: 0 70px;
   position: relative;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .innerBox {
     padding: 0 20px;
   }
@@ -219,7 +219,7 @@ header {
   z-index: 100;
   background: rgba(255, 255, 255, 0.2);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   header {
     text-align: center;
   }
@@ -234,7 +234,7 @@ header .logo {
   display: inline-block;
   text-indent: -9999px;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   header .logo {
     width: 100px;
   }
@@ -345,7 +345,7 @@ header .hamBtn {
           transform: translateY(-50%);
   display: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   header .hamBtn {
     display: block;
   }
@@ -374,7 +374,7 @@ header .timeInfo {
   background: rgba(0, 0, 0, 0.3);
   display: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   header .timeInfo {
     width: 210px;
     height: 130px;
@@ -401,7 +401,7 @@ header .timeInfo .textBox p:nth-child(2) {
   font-family: "Century Gothic";
   font-weight: 700;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   header .timeInfo .textBox p:nth-child(2) {
     font-size: 1.1em;
   }
@@ -409,7 +409,7 @@ header .timeInfo .textBox p:nth-child(2) {
 header .timeInfo .textBox span {
   font-size: 0.9em;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   header .timeInfo .textBox span {
     font-size: 0.8em;
   }
@@ -492,7 +492,7 @@ header .mbMenu .mPagemenu li:hover a {
   letter-spacing: 2px;
   border-left: 1px solid white;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   #container #pageMenu {
     display: none;
   }
@@ -505,7 +505,7 @@ header .mbMenu .mPagemenu li:hover a {
 #container #pageMenu li:first-child {
   display: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   #container #pageMenu li {
     height: 35px;
   }
@@ -582,7 +582,7 @@ header .mbMenu .mPagemenu li:hover a {
   background-position: center bottom;
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   #container #main .mainImg {
     background-position: -300px bottom;
   }
@@ -621,7 +621,7 @@ header .mbMenu .mPagemenu li:hover a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   #container #main .welcome {
     left: 35%;
     bottom: 25%;
@@ -740,7 +740,7 @@ header .mbMenu .mPagemenu li:hover a {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   #container #exhibition .exhibitionWrap {
     width: 90vw;
     height: calc(70vw * 0.562);
@@ -1378,7 +1378,7 @@ header .mbMenu .mPagemenu li:hover a {
       -ms-flex-align: end;
           align-items: flex-end;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   #container #amistory .storyWrap {
     max-width: 850px;
   }
@@ -1926,7 +1926,7 @@ header .mbMenu .mPagemenu li:hover a {
   background: url(../images/bg_museuminfo.jpg) no-repeat center center;
   background-size: cover;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   #container #museuminfo .infoWrap .infoMain {
     width: 80%;
   }
@@ -1985,7 +1985,7 @@ header .mbMenu .mPagemenu li:hover a {
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   #container #museuminfo .infoWrap .infoContents .infoList {
     width: 10%;
   }
@@ -2233,7 +2233,7 @@ footer .innerBox address {
   text-align: center;
   line-height: 1.7;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   footer .innerBox address {
     font-size: 0.8em;
   }
@@ -2288,7 +2288,7 @@ footer .innerBox .topBtn {
   right: 30px;
   background: #222;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   footer .innerBox .topBtn {
     width: 60px;
     height: 60px;
@@ -2312,7 +2312,7 @@ footer .innerBox .topBtn a {
   text-align: center;
   font-size: 1.1em;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   footer .innerBox .topBtn a {
     line-height: 60px;
     font-size: 1em;
