@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Noto sans KR";
+  src: url(../font/NotoSansKR-Regular.otf) format("otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Noto sans KR";
+  src: url(../font/NotoSansKR-Thin.otf) format("otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Century Gothic";
+  src: url(../font/GOTHIC.TTF);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Century Gothic";
+  src: url(../font/GOTHICB.TTF);
+  font-weight: 700;
+}
+h1 {
+  text-align: center;
+  font-size: 2em;
+  line-height: 100px;
+}
+
+.boardWrap {
+  background-color: #e3b657;
+}
+.boardWrap .innerBox {
+  height: calc(100% - 100px);
+  top: 100px;
+  padding: 0 70px 100px;
+}
+@media screen and (max-width: 767px) {
+  .boardWrap .innerBox {
+    height: calc(100% - 65px);
+    top: 65px;
+  }
+}
+.boardWrap .innerBox .boardBox {
+  min-height: 800px;
+}
+.boardWrap .innerBox .boardBox ul {
+  width: 60%;
+  margin: 50px auto;
+  border-top: 1px solid #555;
+  border-bottom: 1px solid #555;
+}
+.boardWrap .innerBox .boardBox ul li {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px dashed #777;
+}
+.boardWrap .innerBox .boardBox ul li:last-child {
+  border-bottom: unset;
+}
+.boardWrap .innerBox .boardBox ul li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.boardWrap .innerBox .boardBox ul li > a p {
+  display: inline-block;
+}
+.boardWrap .innerBox .boardBox ul li > a p.bCategory {
+  width: 15%;
+  color: #194E26;
+  text-align: center;
+  font-weight: bolder;
+}
+.boardWrap .innerBox .boardBox ul li:hover > a {
+  background-color: rgba(255, 255, 255, 0.1);
+}

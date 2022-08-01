@@ -1,0 +1,2336 @@
+@font-face {
+  font-family: "Noto sans KR";
+  src: url(../font/NotoSansKR-Regular.otf) format("otf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Noto sans KR";
+  src: url(../font/NotoSansKR-Thin.otf) format("otf");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Century Gothic";
+  src: url(../font/GOTHIC.TTF);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Century Gothic";
+  src: url(../font/GOTHICB.TTF);
+  font-weight: 700;
+}
+@-webkit-keyframes scrollAni {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes scrollAni {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+body {
+  font-family: "Noto sans KR", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  word-break: keep-all;
+}
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+.innerBox {
+  max-width: 1780px;
+  margin: 0 auto;
+  padding: 0 70px;
+  position: relative;
+}
+@media screen and (max-width: 1023px) {
+  .innerBox {
+    padding: 0 20px;
+  }
+}
+
+.title {
+  font-size: 2em;
+  color: white;
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 3px;
+  display: inline-block;
+  padding-top: 35px;
+}
+@media screen and (max-width: 767px) {
+  .title {
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .title {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+}
+
+.plusmore {
+  width: 70px;
+  height: 70px;
+  margin: 10px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .plusmore {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    position: absolute;
+    right: 5%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .plusmore {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    right: 0;
+  }
+}
+.plusmore > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.plusmore > a:hover > p {
+  opacity: 0;
+}
+.plusmore > a > p {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  color: white;
+  line-height: 70px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 767px) {
+  .plusmore > a > p {
+    opacity: 0;
+  }
+}
+.plusmore > a .circle {
+  position: absolute;
+  left: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 70px;
+  height: 70px;
+}
+@media screen and (max-width: 767px) {
+  .plusmore > a .circle {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+.plusmore > a .circle .background {
+  fill: transparent;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+}
+.plusmore > a .circle .foreground {
+  fill: transparent;
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+  stroke: #f6a608;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transform: rotate(-270deg);
+          transform: rotate(-270deg);
+  -webkit-transition: all 800ms ease;
+  transition: all 800ms ease;
+}
+.plusmore > a .circle .line {
+  position: absolute;
+  stroke-width: 2;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+.plusmore > a .circle:hover .foreground {
+  stroke-dashoffset: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.plusmore > a .circle:hover .line {
+  stroke: #f6a608;
+}
+.plusmore > a .circle:hover .line1 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.plusmore > a .circle:hover .line2 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+@media screen and (max-width: 767px) {
+  .plusmore > a .circle .foreground {
+    fill: rgba(0, 0, 0, 0.1);
+    stroke-dashoffset: 0;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  .plusmore > a .circle .line {
+    stroke: #f6a608;
+  }
+  .plusmore > a .circle .line1 {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .plusmore > a .circle .line2 {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.2);
+}
+@media screen and (max-width: 1023px) {
+  header {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  header {
+    height: 65px;
+  }
+}
+header .logo {
+  width: 130px;
+  display: inline-block;
+  text-indent: -9999px;
+}
+@media screen and (max-width: 1023px) {
+  header .logo {
+    width: 100px;
+  }
+}
+header .logo a {
+  display: block;
+  line-height: 100px;
+  background-image: url(../images/logo_g.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+@media screen and (max-width: 767px) {
+  header .logo a {
+    line-height: 65px;
+  }
+}
+header .gnb {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 70px;
+  top: 0;
+}
+@media screen and (max-width: 767px) {
+  header .gnb {
+    height: 65px;
+    right: 20px;
+  }
+}
+header .gnb li {
+  width: 32px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  header .gnb li {
+    width: 25px;
+    padding-left: 20px;
+  }
+}
+header .gnb .search {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+@media screen and (max-width: 767px) {
+  header .gnb .search {
+    width: 25px;
+    height: 25px;
+  }
+}
+header .gnb .search img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+header .gnb .search input {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background: transparent;
+  right: -5px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  header .gnb .search input {
+    top: 180%;
+    right: 0;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+header .gnb .search input:focus {
+  width: 180px;
+  border: 2px solid #455955;
+  background: rgba(255, 255, 255, 0.2);
+}
+header .gnb .search a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+header .hamBtn {
+  position: absolute;
+  width: 25px;
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  header .hamBtn {
+    display: block;
+  }
+}
+header .hamBtn a {
+  display: block;
+}
+header .hamBtn a span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #194E26;
+  margin-bottom: 7px;
+}
+header .timeInfo {
+  width: 260px;
+  height: 155px;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+  position: absolute;
+  right: 30px;
+  text-align: right;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  header .timeInfo {
+    width: 210px;
+    height: 130px;
+    padding: 15px;
+    right: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .timeInfo {
+    width: 200px;
+    height: 120px;
+  }
+}
+header .timeInfo .textBox {
+  line-height: 2;
+  width: 95%;
+  height: 100%;
+  padding-right: 10px;
+  position: relative;
+  overflow: hidden;
+}
+header .timeInfo .textBox p:nth-child(2) {
+  font-size: 1.3em;
+  font-family: "Century Gothic";
+  font-weight: 700;
+}
+@media screen and (max-width: 1023px) {
+  header .timeInfo .textBox p:nth-child(2) {
+    font-size: 1.1em;
+  }
+}
+header .timeInfo .textBox span {
+  font-size: 0.9em;
+}
+@media screen and (max-width: 1023px) {
+  header .timeInfo .textBox span {
+    font-size: 0.8em;
+  }
+}
+header .timeInfo::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 80%;
+  background: white;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+header .mbMenu {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  left: -100%;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+header .mbMenu .closeBtn {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 30px;
+  left: 30px;
+}
+header .mbMenu .closeBtn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+header .mbMenu .closeBtn a img {
+  width: 100%;
+}
+header .mbMenu .mPagemenu li {
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  font-family: "Century Gothic";
+  font-size: 1.4em;
+  letter-spacing: 3px;
+  line-height: 2.5;
+}
+header .mbMenu .mPagemenu li a {
+  color: white;
+}
+header .mbMenu .mPagemenu li:hover {
+  letter-spacing: 6px;
+}
+header .mbMenu .mPagemenu li:hover a {
+  color: #f6a608;
+}
+
+#container #pageMenu {
+  width: 200px;
+  position: fixed;
+  top: 50%;
+  left: 70px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 10;
+  font-size: 1.2em;
+  font-family: "Century Gothic";
+  letter-spacing: 2px;
+  border-left: 1px solid white;
+}
+@media screen and (max-width: 1023px) {
+  #container #pageMenu {
+    display: none;
+  }
+}
+#container #pageMenu li {
+  height: 40px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#container #pageMenu li:first-child {
+  display: none;
+}
+@media screen and (max-width: 1023px) {
+  #container #pageMenu li {
+    height: 35px;
+  }
+}
+#container #pageMenu li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+#container #pageMenu li.active, #container #pageMenu li:hover {
+  letter-spacing: 5px;
+}
+#container #pageMenu li.active::after, #container #pageMenu li:hover::after {
+  width: 100%;
+  background: #f6a608;
+}
+#container #pageMenu li a {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  margin-left: 7px;
+  line-height: 40px;
+  color: white;
+  border-bottom: 0 solid white;
+}
+#container .section.contents {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#container .section.contents .innerBox {
+  height: calc(100% - 100px);
+  top: 100px;
+}
+@media screen and (max-width: 767px) {
+  #container .section.contents .innerBox {
+    height: calc(100% - 65px);
+    top: 65px;
+  }
+}
+#container #main {
+  background: #d9c2a7;
+}
+@media screen and (max-width: 767px) {
+  #container #main {
+    height: 100vw !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  #container #main {
+    height: 130vw !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container #main {
+    height: 150vw !important;
+  }
+}
+#container #main .mainImg {
+  width: 100%;
+  height: calc(100% - 100px);
+  position: absolute;
+  bottom: 0;
+  background-image: url(../images/bg_main.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 1023px) {
+  #container #main .mainImg {
+    background-position: -300px bottom;
+  }
+}
+@media screen and (max-width: 767px) {
+  #container #main .mainImg {
+    height: calc(100% - 65px);
+    background-position: -100px bottom;
+  }
+}
+@media screen and (max-width: 640px) {
+  #container #main .mainImg {
+    background-position: -150px bottom;
+  }
+}
+#container #main .mainImg .bge1 {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  height: 100%;
+}
+#container #main .mainImg .bge2 {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  height: 100%;
+}
+#container #main .welcome {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(246, 223, 177, 0.3);
+  position: absolute;
+  bottom: 30%;
+  left: 40%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media screen and (max-width: 1023px) {
+  #container #main .welcome {
+    left: 35%;
+    bottom: 25%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #container #main .welcome {
+    width: 90px;
+    height: 90px;
+    left: 35%;
+    bottom: 18%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container #main .welcome {
+    width: 60px;
+    height: 60px;
+    left: 20%;
+  }
+}
+#container #main .welcome p {
+  margin: 45% 0 0 55%;
+  font-family: "Century Gothic";
+  font-size: 1.5em;
+  letter-spacing: 3px;
+  color: #f6a608;
+}
+#container #main .welcome span {
+  display: block;
+  width: 300px;
+  margin-left: 60%;
+  color: white;
+  font-size: 1em;
+}
+#container #main .scroll {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  #container #main .scroll {
+    display: none;
+  }
+}
+#container #main .scroll span {
+  display: inline-block;
+  margin-bottom: 90px;
+  padding: 10px 0;
+  font-size: 1.2em;
+  font-family: "Century Gothic";
+  letter-spacing: 10px;
+  color: white;
+  -webkit-animation: scrollAni 2000ms infinite cubic-bezier(0.37, 0, 0.63, 1);
+          animation: scrollAni 2000ms infinite cubic-bezier(0.37, 0, 0.63, 1);
+}
+#container #main .scroll span:nth-of-type(2) {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+#container #main .scroll span:nth-of-type(3) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+#container #main .scroll span:nth-of-type(4) {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+#container #main .scroll span:nth-of-type(5) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
+}
+#container #main .scroll span:nth-of-type(6) {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+#container #main .scroll::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 80px;
+  background: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+#container #exhibition {
+  background: #d9c2a7;
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition {
+    text-align: center;
+    height: calc(100vw *2.2) !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition .innerBox {
+    height: calc((100vw *2.2)-65px) !important;
+  }
+}
+#container #exhibition .plusmore {
+  display: inline-block;
+  top: -5px;
+}
+#container #exhibition .exhibitionWrap {
+  width: 80vw;
+  max-width: 1536px;
+  height: calc(60vw * 0.562);
+  max-height: 600px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media screen and (max-width: 1023px) {
+  #container #exhibition .exhibitionWrap {
+    width: 90vw;
+    height: calc(70vw * 0.562);
+  }
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition .exhibitionWrap {
+    width: 100%;
+    height: 85%;
+    margin: 30px 0 0;
+    max-height: none;
+  }
+}
+#container #exhibition .exhibitionWrap .exhibitionList {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition .exhibitionWrap .exhibitionList {
+    position: relative;
+    width: 100%;
+    height: calc(70vw * 0.562) !important;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+#container #exhibition .exhibitionWrap .exhibitionList.active {
+  height: 100%;
+  z-index: 3;
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition .exhibitionWrap .exhibitionList.active img {
+    left: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition .exhibitionWrap .exhibitionList:nth-child(1) {
+    top: 0;
+  }
+}
+#container #exhibition .exhibitionWrap .exhibitionList:nth-child(2) {
+  left: 10%;
+  height: 90%;
+  z-index: 2;
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition .exhibitionWrap .exhibitionList:nth-child(2) {
+    height: 100%;
+    top: 10%;
+    left: 0;
+  }
+}
+#container #exhibition .exhibitionWrap .exhibitionList:nth-child(3) {
+  left: 20%;
+  height: 80%;
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition .exhibitionWrap .exhibitionList:nth-child(3) {
+    height: 100%;
+    top: 20%;
+    left: 0;
+  }
+}
+#container #exhibition .exhibitionWrap .exhibitionList img {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition .exhibitionWrap .exhibitionList img {
+    width: auto;
+    position: absolute;
+    left: -50%;
+  }
+}
+#container #exhibition .exhibitionWrap .exhibitionList .textWrap {
+  float: right;
+  width: 35%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: right;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition .exhibitionWrap .exhibitionList .textWrap {
+    background: none;
+    width: 100%;
+  }
+}
+#container #exhibition .exhibitionWrap .exhibitionList .textWrap .listNo {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  font-size: 3em;
+  font-family: "Century Gothic";
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition .exhibitionWrap .exhibitionList .textWrap .listNo {
+    top: 0;
+    right: -100%;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+#container #exhibition .exhibitionWrap .exhibitionList .textWrap.active .listNo {
+  bottom: 80%;
+  right: 80%;
+  font-size: 4em;
+  color: #f6a608;
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition .exhibitionWrap .exhibitionList .textWrap.active .listNo {
+    font-size: 3em;
+    right: 90%;
+  }
+}
+#container #exhibition .exhibitionWrap .exhibitionList .textWrap.active .textBox {
+  right: 0;
+}
+#container #exhibition .exhibitionWrap .exhibitionList .textWrap.active .textBox p, #container #exhibition .exhibitionWrap .exhibitionList .textWrap.active .textBox span {
+  margin-right: 0;
+}
+#container #exhibition .exhibitionWrap .exhibitionList .textWrap .textBox {
+  position: absolute;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  margin: 10px;
+  padding: 0 5px 10px 0;
+  bottom: 10px;
+  right: -100%;
+  overflow: hidden;
+  border-right: 1px solid white;
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition .exhibitionWrap .exhibitionList .textWrap .textBox {
+    bottom: 0;
+    margin: 0 10px 0 0;
+    padding: 0 5px 0 0;
+    width: 100vw;
+  }
+}
+#container #exhibition .exhibitionWrap .exhibitionList .textWrap .textBox p, #container #exhibition .exhibitionWrap .exhibitionList .textWrap .textBox span {
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin-right: -120%;
+}
+#container #exhibition .exhibitionWrap .exhibitionList .textWrap .textBox p {
+  margin-bottom: 10px;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition .exhibitionWrap .exhibitionList .textWrap .textBox p {
+    margin-bottom: 5px;
+  }
+}
+#container #exhibition .exhibitionWrap .exhibitionList .textWrap .textBox p.subtitle {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+  font-size: 1.3em;
+  font-family: "Century Gothic";
+}
+#container #exhibition .exhibitionWrap .exhibitionList .textWrap .textBox span {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+#container #exhibition .exhibitionWrap .exhibitionList .textWrap .textBox span:nth-of-type(1) {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+#container #exhibition .exhibitionWrap .exhibitionList .textWrap .textBox span:nth-of-type(2) {
+  -webkit-transition-delay: 1.5s;
+          transition-delay: 1.5s;
+}
+#container #exhibition .pager {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  right: 5%;
+  bottom: 10%;
+}
+@media screen and (max-width: 767px) {
+  #container #exhibition .pager {
+    display: none;
+  }
+}
+#container #exhibition .pager .rightBtn {
+  font-family: "Century Gothic";
+  letter-spacing: 2px;
+  position: relative;
+  width: 120px;
+  height: 50px;
+  text-indent: -120px;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+#container #exhibition .pager .rightBtn::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #f6a608;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+#container #exhibition .pager .rightBtn::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #f6a608;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+#container #exhibition .pager .rightBtn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  -webkit-transition: color 0.7s;
+  transition: color 0.7s;
+}
+#container #exhibition .pager .rightBtn:hover {
+  text-indent: -20px;
+}
+#container #exhibition .pager .rightBtn:hover::before, #container #exhibition .pager .rightBtn:hover::after {
+  background: #222;
+  height: 2px;
+}
+#container #exhibition .pager .rightBtn:hover a {
+  color: #f6a608;
+}
+#container #program {
+  background: #455955;
+  text-align: center;
+}
+@media screen and (max-width: 640px) {
+  #container #program {
+    height: 800px !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container #program {
+    height: 700px !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  #container #program .innerBox {
+    height: 735px !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container #program .innerBox {
+    height: 635px !important;
+  }
+}
+#container #program .plusmore {
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  #container #program .plusmore {
+    position: absolute;
+    top: 0;
+    left: none;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 360px) {
+  #container #program .plusmore {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+#container #program .programWrap {
+  width: 60vw;
+  max-width: 500px;
+  height: 60vh;
+  margin: 10px auto 0;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  #container #program .programWrap {
+    width: 50%;
+    height: 70%;
+    margin: 70px auto 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container #program .programWrap {
+    width: 60%;
+  }
+}
+#container #program .programWrap .programContents {
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  #container #program .programWrap .programContents {
+    width: 100%;
+  }
+}
+#container #program .programWrap .programContents.active {
+  display: block;
+}
+#container #program .programWrap .programContents a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 30px;
+}
+#container #program .programWrap .programContents a img {
+  width: 100%;
+}
+#container #program .programWrap .programContents a p {
+  margin: 20px 0 10px;
+  font-weight: bolder;
+  color: #eee;
+}
+#container #program .programWrap .programContents a span {
+  display: block;
+  font-size: 0.9em;
+  color: #ddd;
+}
+#container #program .programWrap .prevBtn {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 30%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  #container #program .programWrap .prevBtn {
+    left: -10%;
+  }
+}
+#container #program .programWrap .prevBtn span {
+  font-size: 0.8em;
+  font-family: "Century Gothic";
+  letter-spacing: 1px;
+  color: white;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+@media screen and (max-width: 767px) {
+  #container #program .programWrap .prevBtn span {
+    opacity: 0;
+  }
+}
+#container #program .programWrap .prevBtn::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  left: 0;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media screen and (max-width: 767px) {
+  #container #program .programWrap .prevBtn::before {
+    width: 25px;
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+    background: #f6a608;
+  }
+}
+#container #program .programWrap .prevBtn::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  left: 0;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media screen and (max-width: 767px) {
+  #container #program .programWrap .prevBtn::after {
+    width: 25px;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+    background: #f6a608;
+  }
+}
+#container #program .programWrap .prevBtn:hover span {
+  opacity: 0;
+  letter-spacing: 10px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+#container #program .programWrap .prevBtn:hover::before {
+  width: 40px;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  background: #f6a608;
+}
+#container #program .programWrap .prevBtn:hover::after {
+  width: 40px;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  background: #f6a608;
+}
+#container #program .nextBtn {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 30%;
+  right: 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  #container #program .nextBtn {
+    right: -10%;
+  }
+}
+#container #program .nextBtn span {
+  font-size: 0.8em;
+  font-family: "Century Gothic";
+  letter-spacing: 1px;
+  color: white;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+@media screen and (max-width: 767px) {
+  #container #program .nextBtn span {
+    opacity: 0;
+  }
+}
+#container #program .nextBtn::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  right: 0;
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media screen and (max-width: 767px) {
+  #container #program .nextBtn::before {
+    width: 25px;
+    -webkit-transform: rotate(40deg);
+            transform: rotate(40deg);
+    background: #f6a608;
+  }
+}
+#container #program .nextBtn::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  right: 0;
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+@media screen and (max-width: 767px) {
+  #container #program .nextBtn::after {
+    width: 25px;
+    -webkit-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+    background: #f6a608;
+  }
+}
+#container #program .nextBtn:hover span {
+  opacity: 0;
+  letter-spacing: 10px;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+#container #program .nextBtn:hover::before {
+  width: 40px;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  background: #f6a608;
+}
+#container #program .nextBtn:hover::after {
+  width: 40px;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+  background: #f6a608;
+}
+#container #program .counter {
+  position: absolute;
+  top: -25px;
+  left: 65%;
+  font-family: "Century Gothic";
+  color: #d9c2a7;
+}
+@media screen and (max-width: 767px) {
+  #container #program .counter {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+#container #amistory {
+  background: #e3b657;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  #container #amistory {
+    height: 1000px !important;
+  }
+}
+#container #amistory .plusmore {
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .plusmore {
+    position: absolute;
+    top: 0;
+    left: none;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 360px) {
+  #container #amistory .plusmore {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+}
+#container #amistory .plusmore .foreground {
+  stroke: #194E26;
+}
+#container #amistory .plusmore:hover .line {
+  stroke: #194E26;
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .plusmore .line {
+    stroke: #194E26;
+  }
+}
+#container #amistory .storyWrap {
+  max-width: 920px;
+  margin: 50px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+@media screen and (max-width: 1023px) {
+  #container #amistory .storyWrap {
+    max-width: 850px;
+  }
+}
+@media screen and (max-width: 870px) {
+  #container #amistory .storyWrap {
+    max-width: 770px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .storyWrap {
+    max-width: 600px;
+    margin: 30px auto;
+  }
+}
+@media screen and (max-width: 640px) {
+  #container #amistory .storyWrap {
+    max-width: 500px;
+    margin: 30px auto;
+  }
+}
+@media screen and (max-width: 360px) {
+  #container #amistory .storyWrap {
+    max-width: 300px;
+    margin: 20px auto;
+  }
+}
+#container #amistory .storyWrap .storybox {
+  width: 200px;
+  height: 200px;
+  margin: 2px;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+@media screen and (max-width: 870px) {
+  #container #amistory .storyWrap .storybox {
+    width: 170px;
+    height: 210px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .storyWrap .storybox {
+    width: 160px;
+    height: 200px;
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 640px) {
+  #container #amistory .storyWrap .storybox {
+    width: 200px;
+    height: 190px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container #amistory .storyWrap .storybox {
+    width: 150px;
+    height: 185px;
+  }
+}
+@media screen and (max-width: 360px) {
+  #container #amistory .storyWrap .storybox {
+    width: 230px;
+    height: 100px;
+    background-position: left center;
+    background-size: 50%;
+  }
+}
+#container #amistory .storyWrap .storybox:hover .storytitle {
+  opacity: 1;
+}
+#container #amistory .storyWrap .storybox .subtitle {
+  line-height: 30px;
+  font-size: 1em;
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .storyWrap .storybox .subtitle {
+    line-height: 30px;
+  }
+}
+#container #amistory .storyWrap .storybox .subtitle::after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 1px;
+  background: #194E26;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media screen and (max-width: 480px) {
+  #container #amistory .storyWrap .storybox .subtitle::after {
+    display: none;
+  }
+}
+#container #amistory .storyWrap .story-info {
+  background: #f6a608;
+  margin: 0 15px 15px 0;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: right;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .storyWrap .story-info {
+    margin: 2px;
+  }
+}
+@media screen and (max-width: 360px) {
+  #container #amistory .storyWrap .story-info {
+    text-align: left;
+    padding: 5px;
+  }
+}
+#container #amistory .storyWrap .story-info > p {
+  padding-top: 10px;
+  color: #1aa03b;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+@media screen and (max-width: 360px) {
+  #container #amistory .storyWrap .story-info > p {
+    padding-top: 0;
+  }
+}
+#container #amistory .storyWrap .story-info .textBox {
+  border-right: 1px solid white;
+  padding: 5px;
+  color: white;
+  font-size: 0.9em;
+  font-weight: lighter;
+  position: absolute;
+  margin: 10px;
+  bottom: 0;
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .storyWrap .story-info .textBox {
+    margin: 5px;
+  }
+}
+@media screen and (max-width: 360px) {
+  #container #amistory .storyWrap .story-info .textBox {
+    text-align: right;
+    padding: 0 5px 0 0;
+  }
+}
+#container #amistory .storyWrap .storytitle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .storyWrap .storytitle {
+    background: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+    height: 20%;
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 360px) {
+  #container #amistory .storyWrap .storytitle {
+    width: 50%;
+    height: 100%;
+    margin-left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 1;
+  }
+}
+#container #amistory .storyWrap .storytitle a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .storyWrap .storytitle a {
+    color: #194E26;
+  }
+}
+#container #amistory .storyWrap .storytitle a p {
+  font-size: 1em;
+  line-height: 200px;
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .storyWrap .storytitle a p {
+    line-height: 35px;
+    text-align: left;
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 360px) {
+  #container #amistory .storyWrap .storytitle a p {
+    line-height: 45px;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+#container #amistory .storyWrap .storytitle a .more {
+  width: 80px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 1px solid white;
+  line-height: 30px;
+  font-size: 0.9em;
+  font-family: "Century Gothic";
+  position: relative;
+}
+#container #amistory .storyWrap .storytitle a .more:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: calc(1px/-1);
+  left: calc(1px/-1);
+  background: -webkit-gradient(linear, left top, right top, from(#f6a608), to(#f6a608)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f6a608), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f6a608), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(#f6a608), to(#f6a608)), -webkit-gradient(linear, right top, left top, from(#f6a608), to(#f6a608));
+  background: linear-gradient(to right, #f6a608 0%, #f6a608 100%), linear-gradient(to top, #f6a608 50%, transparent 50%), linear-gradient(to top, #f6a608 50%, transparent 50%), linear-gradient(to right, #f6a608 0%, #f6a608 100%), linear-gradient(to left, #f6a608 0%, #f6a608 100%);
+  background-size: 100% 1px, 1px 200%, 1px 200%, 0% 1px, 0% 1px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  -webkit-transition: background-position 0.3s ease-in-out, background-size 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: background-position 0.3s ease-in-out, background-size 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out, background-size 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out, background-size 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform: scaleX(0) rotate(180deg);
+          transform: scaleX(0) rotate(180deg);
+  -webkit-transition-delay: 0.6s, 0.3s, 0s;
+          transition-delay: 0.6s, 0.3s, 0s;
+}
+#container #amistory .storyWrap .storytitle a .more:hover:before {
+  background-size: 200% 1px, 1px 400%, 1px 400%, 55% 1px, 55% 1px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  -webkit-transform: scaleX(1) rotate(180deg);
+          transform: scaleX(1) rotate(180deg);
+  -webkit-transition-delay: 0s, 0.3s, 0.6s;
+          transition-delay: 0s, 0.3s, 0.6s;
+}
+#container #amistory .storyWrap .storytitle a .more:hover {
+  background: #111;
+  color: #e3b657;
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .storyWrap .storytitle a .more {
+    bottom: 75%;
+    left: 85%;
+    width: 30px;
+    height: 20px;
+    border: none;
+    line-height: 20px;
+    font-size: 0.85em;
+  }
+}
+@media screen and (max-width: 360px) {
+  #container #amistory .storyWrap .storytitle a .more {
+    bottom: -10%;
+    left: 50%;
+    width: 50px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #f6a608;
+  }
+}
+#container #amistory .storyWrap .story-thumb1 {
+  background-image: url(../images/story1.jpg);
+}
+#container #amistory .storyWrap .story-thumb2 {
+  background-image: url(../images/story2.jpg);
+}
+#container #amistory .storyWrap .story-thumb3 {
+  background-image: url(../images/story3.jpg);
+}
+#container #amistory .storyWrap .story-thumb4 {
+  background-image: url(../images/story4.jpg);
+}
+#container #amistory .storyWrap .story-thumb5 {
+  background-image: url(../images/story5.jpg);
+}
+#container #amistory .storyWrap .notice {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+#container #amistory .storyWrap .notice:hover {
+  background-color: #194E26;
+}
+#container #amistory .storyWrap .notice:hover a {
+  color: white;
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .storyWrap .notice {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container #amistory .storyWrap .notice {
+    width: 300px;
+    height: 160px;
+    border: 1px solid #222;
+  }
+}
+@media screen and (max-width: 360px) {
+  #container #amistory .storyWrap .notice {
+    width: 230px;
+    height: 170px;
+  }
+}
+#container #amistory .storyWrap .notice a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #194E26;
+  border: 1px solid #194E26;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px;
+  position: relative;
+}
+#container #amistory .storyWrap .notice a:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/-1);
+  left: calc(2px/-1);
+  background: -webkit-gradient(linear, left top, right top, from(#222), to(#222)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #222), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #222), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(#222), to(#222)), -webkit-gradient(linear, right top, left top, from(#222), to(#222));
+  background: linear-gradient(to right, #222 0%, #222 100%), linear-gradient(to top, #222 50%, transparent 50%), linear-gradient(to top, #222 50%, transparent 50%), linear-gradient(to right, #222 0%, #222 100%), linear-gradient(to left, #222 0%, #222 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  -webkit-transition: background-position 0.4s ease-in-out, background-size 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  transition: background-position 0.4s ease-in-out, background-size 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, background-position 0.4s ease-in-out, background-size 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, background-position 0.4s ease-in-out, background-size 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  -webkit-transform: scaleX(0) rotate(180deg);
+          transform: scaleX(0) rotate(180deg);
+  -webkit-transition-delay: 0.8s, 0.4s, 0s;
+          transition-delay: 0.8s, 0.4s, 0s;
+}
+#container #amistory .storyWrap .notice a:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  -webkit-transform: scaleX(1) rotate(180deg);
+          transform: scaleX(1) rotate(180deg);
+  -webkit-transition-delay: 0s, 0.4s, 0.8s;
+          transition-delay: 0s, 0.4s, 0.8s;
+}
+@media screen and (max-width: 480px) {
+  #container #amistory .storyWrap .notice a {
+    padding: 0 5px;
+  }
+}
+#container #amistory .storyWrap .notice a p {
+  padding: 10px 0;
+}
+@media screen and (max-width: 360px) {
+  #container #amistory .storyWrap .notice a p {
+    padding: 5px 0 10px 0;
+  }
+}
+#container #amistory .storyWrap .notice a span {
+  display: inline-block;
+  padding: 4px;
+  font-size: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .storyWrap .notice a span {
+    font-size: 12px;
+  }
+}
+#container #amistory .storyWrap .notice a span.more {
+  margin-left: 50%;
+  background: none;
+}
+#container #amistory .storyWrap .board {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+  text-align: left;
+}
+#container #amistory .storyWrap .board:hover {
+  background: #194E26;
+}
+#container #amistory .storyWrap .board:hover a {
+  color: white;
+}
+@media screen and (max-width: 767px) {
+  #container #amistory .storyWrap .board {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container #amistory .storyWrap .board {
+    width: 300px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 360px) {
+  #container #amistory .storyWrap .board {
+    width: 230px;
+    height: 50px;
+  }
+}
+#container #amistory .storyWrap .board a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  color: #194E26;
+  border: 1px solid #194E26;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+#container #amistory .storyWrap .board a:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/-1);
+  left: calc(2px/-1);
+  background: -webkit-gradient(linear, left top, right top, from(#222), to(#222)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #222), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #222), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(#222), to(#222)), -webkit-gradient(linear, right top, left top, from(#222), to(#222));
+  background: linear-gradient(to right, #222 0%, #222 100%), linear-gradient(to top, #222 50%, transparent 50%), linear-gradient(to top, #222 50%, transparent 50%), linear-gradient(to right, #222 0%, #222 100%), linear-gradient(to left, #222 0%, #222 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  -webkit-transition: background-position 0.4s ease-in-out, background-size 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  transition: background-position 0.4s ease-in-out, background-size 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, background-position 0.4s ease-in-out, background-size 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, background-position 0.4s ease-in-out, background-size 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  -webkit-transform: scaleX(0) rotate(180deg);
+          transform: scaleX(0) rotate(180deg);
+  -webkit-transition-delay: 0.8s, 0.4s, 0s;
+          transition-delay: 0.8s, 0.4s, 0s;
+}
+#container #amistory .storyWrap .board a:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  -webkit-transform: scaleX(1) rotate(180deg);
+          transform: scaleX(1) rotate(180deg);
+  -webkit-transition-delay: 0s, 0.4s, 0.8s;
+          transition-delay: 0s, 0.4s, 0.8s;
+}
+@media screen and (max-width: 480px) {
+  #container #amistory .storyWrap .board a {
+    padding: 0;
+    border: 1px solid #222;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container #amistory .storyWrap .board a .subtitle {
+    line-height: 50px;
+  }
+}
+#container #amistory .storyWrap .board a .boardbox {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 360px) {
+  #container #amistory .storyWrap .board a .boardbox {
+    height: 30px;
+  }
+}
+#container #amistory .storyWrap .board a .boardbox p {
+  font-size: 0.9em;
+  line-height: 30px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+}
+@media screen and (max-width: 480px) {
+  #container #amistory .storyWrap .board a .boardbox p {
+    display: none;
+  }
+}
+#container #museuminfo {
+  background: #232426;
+}
+@media screen and (max-width: 767px) {
+  #container #museuminfo {
+    text-align: center;
+    height: 900px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  #container #museuminfo .innerBox {
+    height: 835px;
+  }
+}
+#container #museuminfo .plusmore {
+  display: inline-block;
+  top: -5px;
+}
+#container #museuminfo .infoWrap {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  width: 100%;
+  height: 48%;
+  max-height: 450px;
+}
+@media screen and (max-width: 767px) {
+  #container #museuminfo .infoWrap {
+    height: 60%;
+    bottom: 55%;
+  }
+}
+#container #museuminfo .infoWrap .infoMain {
+  display: block;
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+  border: 1px solid #232426;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url(../images/bg_museuminfo.jpg) no-repeat center center;
+  background-size: cover;
+}
+@media screen and (max-width: 1023px) {
+  #container #museuminfo .infoWrap .infoMain {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #container #museuminfo .infoWrap .infoMain {
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+@media screen and (max-width: 480px) {
+  #container #museuminfo .infoWrap .infoMain {
+    height: 45vw;
+  }
+}
+#container #museuminfo .infoWrap .infoContents {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+@media screen and (max-width: 767px) {
+  #container #museuminfo .infoWrap .infoContents {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+  }
+}
+#container #museuminfo .infoWrap .infoContents .infoList {
+  width: 6.25%;
+  background: #232426;
+  border-left: 1px solid #e3b657;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+@media screen and (max-width: 1023px) {
+  #container #museuminfo .infoWrap .infoContents .infoList {
+    width: 10%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #container #museuminfo .infoWrap .infoContents .infoList {
+    width: 100%;
+    height: 10%;
+    border-left: 0;
+    border-top: 1px solid #e3b657;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container #museuminfo .infoWrap .infoContents .infoList {
+    height: 15%;
+  }
+}
+#container #museuminfo .infoWrap .infoContents .infoList:hover {
+  cursor: pointer;
+}
+#container #museuminfo .infoWrap .infoContents .infoList .infotitle {
+  color: white;
+  font-size: 1.1em;
+  font-weight: 400;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  position: absolute;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+@media screen and (max-width: 767px) {
+  #container #museuminfo .infoWrap .infoContents .infoList .infotitle {
+    -webkit-writing-mode: unset;
+        -ms-writing-mode: unset;
+            writing-mode: unset;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 1.1em;
+  }
+}
+#container #museuminfo .infoWrap .infoContents .infoList .textBox {
+  color: white;
+  opacity: 0;
+  font-size: 0.9em;
+  font-weight: 100;
+  text-align: right;
+  position: absolute;
+  max-width: 200px;
+  bottom: 40px;
+  right: -200%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+@media screen and (max-width: 767px) {
+  #container #museuminfo .infoWrap .infoContents .infoList .textBox {
+    bottom: 10px;
+  }
+}
+#container #museuminfo .infoWrap .infoContents .infoList.active {
+  width: 13%;
+}
+@media screen and (max-width: 767px) {
+  #container #museuminfo .infoWrap .infoContents .infoList.active {
+    width: 100%;
+    height: 30%;
+  }
+}
+#container #museuminfo .infoWrap .infoContents .infoList.active .infotitle {
+  color: #e3b657;
+  font-size: 1.3em;
+  letter-spacing: 5px;
+}
+@media screen and (max-width: 767px) {
+  #container #museuminfo .infoWrap .infoContents .infoList.active .infotitle {
+    position: absolute;
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    padding-left: 10px;
+    font-size: 1.3em;
+  }
+}
+#container #museuminfo .infoWrap .infoContents .infoList.active .textBox {
+  right: 10px;
+  opacity: 0.8;
+}
+#container #museuminfo .infoWrap .infoContents .imgBox {
+  position: relative;
+  width: 0;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 767px) {
+  #container #museuminfo .infoWrap .infoContents .imgBox {
+    width: 100%;
+    height: 0;
+  }
+}
+#container #museuminfo .infoWrap .infoContents .imgBox.info1 {
+  background-image: url(../images/info_exhibition.png);
+}
+#container #museuminfo .infoWrap .infoContents .imgBox.info2 {
+  background-image: url(../images/info_maisondeami.jpg);
+}
+#container #museuminfo .infoWrap .infoContents .imgBox.info3 {
+  background-image: url(../images/info_hanok.jpeg);
+}
+#container #museuminfo .infoWrap .infoContents .imgBox.info4 {
+  background-image: url(../images/info_giverni.jpg);
+}
+#container #museuminfo .infoWrap .infoContents .imgBox.active {
+  width: 50%;
+}
+@media screen and (max-width: 767px) {
+  #container #museuminfo .infoWrap .infoContents .imgBox.active {
+    width: 100%;
+    height: 45vw;
+  }
+}
+#container #museuminfo .infoBtn {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  width: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+@media screen and (max-width: 480px) {
+  #container #museuminfo .infoBtn {
+    bottom: 30px;
+  }
+}
+#container #museuminfo .infoBtn > div {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 10px;
+  border: 1px solid #777;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 767px) {
+  #container #museuminfo .infoBtn > div {
+    width: 80px;
+    height: 80px;
+    border: 1px solid #e3b657;
+    background: #222;
+  }
+}
+#container #museuminfo .infoBtn > div a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 98px;
+  text-align: center;
+  color: #ddd;
+  position: relative;
+}
+#container #museuminfo .infoBtn > div a:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/-1);
+  left: calc(2px/-1);
+  background: -webkit-gradient(linear, left top, right top, from(#f6a608), to(#f6a608)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f6a608), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f6a608), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(#f6a608), to(#f6a608)), -webkit-gradient(linear, right top, left top, from(#f6a608), to(#f6a608));
+  background: linear-gradient(to right, #f6a608 0%, #f6a608 100%), linear-gradient(to top, #f6a608 50%, transparent 50%), linear-gradient(to top, #f6a608 50%, transparent 50%), linear-gradient(to right, #f6a608 0%, #f6a608 100%), linear-gradient(to left, #f6a608 0%, #f6a608 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  -webkit-transition: background-position 0.3s ease-in-out, background-size 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: background-position 0.3s ease-in-out, background-size 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out, background-size 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out, background-size 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform: scaleX(0) rotate(0deg);
+          transform: scaleX(0) rotate(0deg);
+  -webkit-transition-delay: 0.6s, 0.3s, 0s;
+          transition-delay: 0.6s, 0.3s, 0s;
+}
+#container #museuminfo .infoBtn > div a:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  -webkit-transform: scaleX(1) rotate(0deg);
+          transform: scaleX(1) rotate(0deg);
+  -webkit-transition-delay: 0s, 0.3s, 0.6s;
+          transition-delay: 0s, 0.3s, 0.6s;
+}
+@media screen and (max-width: 767px) {
+  #container #museuminfo .infoBtn > div a {
+    line-height: 76px;
+  }
+}
+#container #museuminfo .infoBtn > div:hover {
+  background: #111;
+}
+
+footer {
+  background: #111;
+}
+@media screen and (max-width: 767px) {
+  footer {
+    padding-top: 20px;
+  }
+}
+footer .innerBox {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 200px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 767px) {
+  footer .innerBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+footer .innerBox .footLogo img {
+  width: 130px;
+}
+@media screen and (max-width: 767px) {
+  footer .innerBox .footLogo img {
+    width: 100px;
+  }
+}
+footer .innerBox address {
+  color: white;
+  font-size: 0.9em;
+  text-align: center;
+  line-height: 1.7;
+}
+@media screen and (max-width: 1023px) {
+  footer .innerBox address {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .innerBox address {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+footer .innerBox .sns {
+  padding-right: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+@media screen and (max-width: 767px) {
+  footer .innerBox .sns {
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+footer .innerBox .sns li {
+  float: left;
+  width: 32px;
+  height: 32px;
+  margin: 0 0 0 20px;
+}
+@media screen and (max-width: 767px) {
+  footer .innerBox .sns li {
+    width: 25px;
+    height: 25px;
+    margin: 0 15px;
+  }
+}
+footer .innerBox .sns li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+footer .innerBox .sns li a img {
+  width: 100%;
+  height: 100%;
+}
+footer .innerBox .topBtn {
+  width: 70px;
+  height: 70px;
+  border: 3px solid #e3b657;
+  border-radius: 50%;
+  position: absolute;
+  right: 30px;
+  background: #222;
+}
+@media screen and (max-width: 1023px) {
+  footer .innerBox .topBtn {
+    width: 60px;
+    height: 60px;
+    top: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .innerBox .topBtn {
+    width: 45px;
+    height: 45px;
+    right: 10px;
+    border: 2px solid #e3b657;
+  }
+}
+footer .innerBox .topBtn a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #e3b657;
+  line-height: 70px;
+  text-align: center;
+  font-size: 1.1em;
+}
+@media screen and (max-width: 1023px) {
+  footer .innerBox .topBtn a {
+    line-height: 60px;
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .innerBox .topBtn a {
+    line-height: 45px;
+  }
+}

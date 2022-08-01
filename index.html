@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Ami Art Museum">
+  <meta property="og:url" content="https://amiam.netlify.app/">
+  <meta property="og:image" content="https://amiam.netlify.app/images/logo_g.png">
+  <meta property="og:site_name" content="Ami Art Museum">
+  <meta property="og:description" content="친구처럼 가깝고 친근한 미술관">
+
+  <title>AmiArtMuseum</title>
+
+  <link rel="shortcut icon" href="icon_ami.ico">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/ami_style.css">
+
+  <!-- fullpage -->
+  <link rel="stylesheet" href="css/fullpage.css">
+
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/ami.js"></script>
+  <script>
+    $(function(){
+      $("#header").load('header.html');
+      $("#footer").load('footer.html');
+    })
+  </script>
+
+</head>
+
+<body>
+  <ul class="skip_menu">
+    <li><a href="#container">본문 바로가기</a></li>
+  </ul>
+
+  <!-- header -->
+  <header id="header">
+  </header>
+
+  <!-- #container -->
+  <div id="container">
+    <ul id="pageMenu">
+      <li data-menuanchor="main"><a href="javascript:void(0)"></a></li>
+      <li data-menuanchor="firstPage"><a href="#firstPage">Exhibition</a></li>
+      <li data-menuanchor="secondPage"><a href="#secondPage">Program</a></li>
+      <li data-menuanchor="thirdPage"><a href="#thirdPage">Ami Story</a></li>
+      <li data-menuanchor="fourthPage"><a href="#fourthPage">Museum Info</a></li>
+    </ul>
+    <div id="fullpage">
+      <div class="section contents" id="main" data-anchor="main">
+        <div class="mainImg">
+          <img src="./images/bg_effect1.png" alt="bg_effect1" class="bge1">
+          <img src="./images/bg_effect2.png" alt="bg_effect2" class="bge2">
+        </div>
+        <div class="welcome">
+          <p>Ami</p>
+          <span>친구처럼 가깝고 친근한 미술관</span>
+        </div>
+        <div class="scroll">
+          <span>S</span>
+          <span>C</span>
+          <span>R</span>
+          <span>O</span>
+          <span>L</span>
+          <span>L</span>
+        </div>
+      </div>
+
+      <div class="section contents" id="exhibition" data-anchor="firstPage">
+        <div class="innerBox">
+          <h2 class="title">EXHIBITION</h2>
+          <div class="plusmore">
+            <a href="javascript:void(0)">
+              <p>더보기</p>
+              <svg class="circle">
+                <g>
+                  <ellipse class="background" ry="34" rx="34" cy="35" cx="35" stroke-width="2" />
+                  <ellipse class="foreground" ry="34" rx="34" cy="35" cx="35" stroke-width="2" />
+                  <line class="line line1" x1="24" y1="35" x2="45" y2="35"></line>
+                  <line class="line line2" x1="24" y1="35" x2="45" y2="35"></line>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="exhibitionWrap">
+            <div class="exhibitionList" id="list1">
+              <img src="./images/exhibition1.jpg" alt="고흐">
+              <div class="textWrap">
+                <p class="listNo">1</p>
+                <div class="textBox">
+                  <p class="subtitle">Vincent van <b>Gogh</b></p>
+                  <p>고흐</p>
+                  <span>제1전시관</span>
+                  <span>전시기간 2021.12.24 ~ 2022.3.21</span>
+                </div>
+              </div>
+            </div>
+            <div class="exhibitionList" id="list2">
+              <img src="./images/exhibition2.jpg" alt="모네">
+              <div class="textWrap">
+                <p class="listNo">2</p>
+                <div class="textBox">
+                  <p class="subtitle">Claude <b>Monet</b></p>
+                  <p>모네</p>
+                  <span>제2전시관</span>
+                  <span>전시기간 2022.2.1 ~ 2022.4.16</span>
+                </div>
+              </div>
+            </div>
+            <div class="exhibitionList" id="list3">
+              <img src="./images/exhibition3.jpg" alt="조엘">
+              <div class="textWrap">
+                <p class="listNo">3</p>
+                <div class="textBox">
+                  <p class="subtitle">Grace Jane <b>Joel</b></p>
+                  <p>그레이스 조엘</p>
+                  <span>제3전시실</span>
+                  <span>전시기간 2022.3.1 ~ 2022.6.13</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pager">
+            <div class="rightBtn"><a href="javascript:void(0)">NEXT</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section contents" id="program" data-anchor="secondPage">
+        <div class="innerBox">
+          <h2 class="title">Program</h2>
+          <div class="plusmore">
+            <a href="javascript:void(0)">
+              <p>더보기</p>
+              <svg class="circle">
+                <g>
+                  <ellipse class="background" ry="34" rx="34" cy="35" cx="35" stroke-width="2" />
+                  <ellipse class="foreground" ry="34" rx="34" cy="35" cx="35" stroke-width="2" />
+                  <line class="line line1" x1="24" y1="35" x2="45" y2="35"></line>
+                  <line class="line line2" x1="24" y1="35" x2="45" y2="35"></line>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="programWrap">
+            <div class="programContents active">
+              <a href="javascript:void(0)">
+                <img src="./images/program1.jpg" alt="미술주간이벤트">
+                <p>미술주간 이벤트</p>
+                <span>2021.12.20 ~ 2022.3.21</span>
+                <span>#좋아요 #미술관포토존</span>
+              </a>
+            </div>
+            <div class="programContents">
+              <a href="javascript:void(0)">
+                <img src="./images/program2.jpg" alt="아美를칠하다">
+                <p>아 美를 칠하다 </p>
+                <span>3월 ~ 11월</span>
+                <span>#컬러링상설프로그램</span>
+              </a>
+            </div>
+            <div class="programContents">
+              <a href="javascript:void(0)">
+                <img src="./images/program3.jpg" alt="Dimension展">
+                <p>Dimension展</p>
+                <span>2022.3.3 ~ 2022.3.25</span>
+                <span>#각자의 시선으로 마주하는 세상</span>
+              </a>
+            </div>
+            <div class="programContents">
+              <a href="javascript:void(0)">
+                <img src="./images/program4.jpg" alt="에꼴드아미레지던시결과보고展">
+                <p>에꼴 드 아미 레지던시 결과보고展</p>
+                <span>2022.1.14 ~ 2022.2.28</span>
+                <span>#예술, 당진 포구를 담다</span>
+              </a>
+            </div>
+            <div class="programContents">
+              <a href="javascript:void(0)">
+                <img src="./images/program5.jpg" alt="Mix&Match">
+                <p>Mix&Match</p>
+                <span>2021.5.27 ~ 10.12</span>
+                <span>명윤아, 박노을, 인주리, 정수, 정지숙</span>
+              </a>
+            </div>
+            <div class="programContents">
+              <a href="javascript:void(0)">
+                <img src="./images/program6.jpg" alt="추상의경계展">
+                <p>추상의 경계展</p>
+                <span>2022.3.3 ~ 2022.3.25</span>
+                <span>#예술을 풍요롭게 만드는 지점</span>
+              </a>
+            </div>
+            <div class="prevBtn"><span>PREV</span></div>
+            <div class="nextBtn"><span>NEXT</span></div>
+            <div class="counter">
+              <span class="count"></span>
+              /
+              <span class="total"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section contents" id="amistory" data-anchor="thirdPage">
+        <div class="innerBox">
+          <h2 class="title">Ami Story</h2>
+          <div class="plusmore">
+            <a href="javascript:void(0)">
+              <p>더보기</p>
+              <svg class="circle">
+                <g>
+                  <ellipse class="background" ry="34" rx="34" cy="35" cx="35" stroke-width="2" />
+                  <ellipse class="foreground" ry="34" rx="34" cy="35" cx="35" stroke-width="2" />
+                  <line class="line line1" x1="24" y1="35" x2="45" y2="35"></line>
+                  <line class="line line2" x1="24" y1="35" x2="45" y2="35"></line>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="storyWrap">
+            <div class="storybox story-info">
+              <p>미술관 이야기</p>
+              <div class="textBox">
+                <p>미술관의 개화 소식, 작가소식, 전시 소식 등을 전하는 아미미술관의 소통창구입니다.</p>
+              </div>
+            </div>
+            <div class="storybox story-thumb1">
+              <div class="storytitle">
+                <a href="javascript:void(0)">
+                  <p>쉬는책 다이어리</p>
+                  <span class="more">More</span>
+                </a>
+              </div>
+            </div>
+            <div class="storybox story-thumb2">
+              <div class="storytitle">
+                <a href="javascript:void(0)">
+                  <p>자아드로잉북</p>
+                  <span class="more">More</span>
+                </a>
+              </div>
+            </div>
+            <div class="storybox story-thumb3">
+              <div class="storytitle">
+                <a href="javascript:void(0)">
+                  <p>카셀에서 온 소식</p>
+                  <span class="more">More</span>
+                </a>
+              </div>
+            </div>
+            <div class="storybox story-thumb4">
+              <div class="storytitle">
+                <a href="javascript:void(0)">
+                  <p>아미소식</p>
+                  <span class="more">More</span>
+                </a>
+              </div>
+            </div>
+            <div class="storybox story-thumb5">
+              <div class="storytitle">
+                <a href="javascript:void(0)">
+                  <p>예삐의 하루</p>
+                  <span class="more">More</span>
+                </a>
+              </div>
+            </div>
+            <div class="storybox notice">
+              <a href="javascript:void(0)">
+                <h3 class="subtitle">미술관 공지</h3>
+                <p><b>에듀케이터 모집 공고</b></p>
+                <span>(사)한국사립미술관협회가 문화체육관광부
+                  지원으로 실시하는 ‘2022 사립미술관 전문
+                  인력지원사업’ 에 따라 에듀케이터를 모집
+                  하오니 많은 응모바랍니다.</span>
+                <span class="more">상세내용보기</span>
+              </a>
+            </div>
+            <div class="storybox board">
+              <a href="./board.html">
+                <h3 class="subtitle">게시판</h3>
+                <div class="boardbox">
+                  <p>소복소복 눈 내리는 아미미술관</p>
+                  <p>우리동네 미술관</p>
+                  <p>3월1일 관람 가능한가요?</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section contents" id="museuminfo" data-anchor="fourthPage">
+        <div class="innerBox">
+          <h2 class="title">Museum Info</h2>
+          <div class="plusmore">
+            <a href="./museuminfo.html">
+              <p>더보기</p>
+              <svg class="circle">
+                <g>
+                  <ellipse class="background" ry="34" rx="34" cy="35" cx="35" stroke-width="2" />
+                  <ellipse class="foreground" ry="34" rx="34" cy="35" cx="35" stroke-width="2" />
+                  <line class="line line1" x1="24" y1="35" x2="45" y2="35"></line>
+                  <line class="line line2" x1="24" y1="35" x2="45" y2="35"></line>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="infoWrap">
+            <div class="infoMain"></div>
+            <div class="infoContents">
+              <div class="infoList">
+                <h3 class="infotitle">전시관</h3>
+                <p class="textBox">동시대 활발하게 활동하는 작가들을 초청하여 현대미술과 문화를 균형있는 시각으로 소개합니다.</p>
+              </div>
+              <div class="imgBox info1"></div>
+              <div class="infoList">
+                <h3 class="infotitle">메종드아미</h3>
+                <p class="textBox">옛 학교 창고의 기틀이 그대로 남아있는 전시장으로, 아티스트·관람객·예술 공간이 서로 상생할 수 있는 복합문화공간입니다.</p>
+              </div>
+              <div class="imgBox info2"></div>
+              <div class="infoList">
+                <h3 class="infotitle">한옥</h3>
+                <p class="textBox">(구)유동초등학교의 교장선생님께서 생활하시던 한옥을 그대로 보존해 10주년 기념 전시장으로 개관하였습니다. 정겨운 정취 속 소담하게 자리 잡은
+                  예술작품들을 만나볼 수 있습니다.
+                </p>
+              </div>
+              <div class="imgBox info3"></div>
+              <div class="infoList">
+                <h3 class="infotitle">카페지베르니</h3>
+                <p class="textBox">운동장 끝 편에 위치한 쉼터입니다. 창문 밖으로 펼쳐진 넓고 푸르른 자연을 만끽하며 관람한 전시에 대해 이야기 나누고, 간단한 다과를 즐길 수 있습니다.
+                </p>
+              </div>
+              <div class="imgBox info4"></div>
+            </div>
+          </div>
+          <div class="infoBtn">
+            <div class="tourInfo"><a href="./tourinfo.html">관람안내</a></div>
+            <div class="location"><a href="./location.html">오시는 길</a></div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <footer id="footer" class="section fp-auto-height">
+        <!-- <div class="innerBox">
+          <h1 class="footLogo"><img src="./images/logo_w.png" alt="footlogo"></h1>
+          <address>충남 당진시 순성면 남부로 753~4 <br> T.041-353-1555 F.041-353-1555 <br>E.AMAM158@NAVER.COM <br> COPYRIGHT 2014
+            AMI
+            MUSEUM OF ART ALL RIGHTS RESERVED</address>
+          <ul class="sns">
+            <li><a href="https://www.facebook.com/EcoleDeAmi?ref=hl"><img src="./images/icon_facebook.png"
+                  alt="Facebook"></a></li>
+            <li><a href="https://twitter.com/amiart1"><img src="./images/icon_twitter.png" alt="Twitter"></a></li>
+            <li><a href="https://blog.naver.com/amam158"><img src="./images/icon_blog.png" alt="NaverBlog"></a></li>
+          </ul>
+          <div class="topBtn"><a href="#main">TOP</a></div>
+        </div> -->
+      </footer>
+    </div>
+  </div>
+  </div>
+
+  <script src="js/fullpage.js"></script>
+  <script>
+    var myFullpage = new fullpage('#fullpage', {
+      menu: "#pageMenu",
+      anchors: ['main', 'firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+      responsiveWidth: 767
+    })
+  </script>
+
+</body>
+
+</html>
